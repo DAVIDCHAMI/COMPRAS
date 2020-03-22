@@ -1,0 +1,77 @@
+group 'co.com.todo1'
+version '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2"
+        }
+    }
+
+
+
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
+        classpath "gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.8"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: 'org.sonarqube'
+apply plugin: 'com.github.sherter.google-java-format'
+
+
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "practicaCompras"
+        property "sonar.projectName", "practicaCompras"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.sources", "src/main"
+        property "sonar.java.binaries", "build"
+        property "sonar.test", "src/test"
+    }
+}
+
+dependencies {
+    implementation 'net.serenity-bdd:serenity-rest-assured:1.9.9'
+    implementation 'net.serenity-bdd:serenity-core:1.9.9'
+    implementation 'net.serenity-bdd:serenity-junit:1.9.9'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.5'
+    implementation 'net.serenity-bdd:serenity-screenplay:1.9.9'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.9.0'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.7'
+    testImplementation 'org.hamcrest:hamcrest-core:1.3'
+}
+
+
+tasks.withType(Test) {
+    systemProperties = System.properties
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
+compileJava.dependsOn 'googleJavaFormat'
+
+
+gradle.startParameter.continueOnFailure = true
