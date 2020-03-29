@@ -1,4 +1,4 @@
-package co.com.practica.model.entitys;
+package co.com.practica.model.entitys.registro;
 
 import co.com.practica.model.RegistrarUsuario;
 

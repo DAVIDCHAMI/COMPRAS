@@ -1,11 +1,11 @@
-package co.com.practica.tasks;
+package co.com.practica.tasks.registro;
 
-import static co.com.practica.model.entitys.RegistrarUsuarioEntity.getRegistrarUsuario;
+import static co.com.practica.model.entitys.registro.RegistrarUsuarioEntity.getRegistrarUsuario;
 import static co.com.practica.userinterface.MyStore.*;
 import static co.com.practica.userinterface.registro.Registros.*;
 
 import co.com.practica.model.RegistrarUsuario;
-import co.com.practica.model.entitys.RegistrarUsuarioEntity;
+import co.com.practica.model.entitys.registro.RegistrarUsuarioEntity;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

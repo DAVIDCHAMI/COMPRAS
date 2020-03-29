@@ -1,7 +1,7 @@
 package co.com.practica.stepdefinitions.registro;
 
 import static co.com.practica.questions.ValidarRegistro.nombreUsuario;
-import static co.com.practica.tasks.RealizarRegistro.conSusDatos;
+import static co.com.practica.tasks.registro.RealizarRegistro.conSusDatos;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.Matchers.equalTo;
