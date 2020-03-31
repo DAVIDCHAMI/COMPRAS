@@ -3,6 +3,8 @@ package co.com.practica.userinterface.registro;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
+import static co.com.practica.utils.constant.ConstainTypesClass.UI_CLASS;
+
 public class Registros {
   public static final Target RB_GENERO_MASCULINO =
       Target.the("radio buton para hombres").located(By.id("uniform-id_gender1"));
@@ -31,6 +33,6 @@ public class Registros {
       Target.the("mensaje confirmacion ").locatedBy(("//a[@class='account']/span"));
 
   private Registros() {
-    throw new IllegalStateException("User interface Class");
+    throw new IllegalStateException(UI_CLASS);
   }
 }

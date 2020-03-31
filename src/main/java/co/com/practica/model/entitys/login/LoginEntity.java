@@ -6,8 +6,8 @@ public class LoginEntity {
 
   private static RealizaLogin realizarLogin;
 
-  public LoginEntity() {}
-
+  private LoginEntity() {
+  }
   public static RealizaLogin getRealizarLogin() {
     return realizarLogin;
   }
