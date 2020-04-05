@@ -13,4 +13,4 @@
       |CHAMI CHAMII|
       Ejemplos:
         |email                |genero|primerNombre|ultimoNombre|password|nombre   |apellido  |empresa  |domicilio      |ciudad    |estado   |codigoPostal|movil    |alias |
-        |chamirojaaooo@hotmail.com|Mr    |CHAMI        |CHAMII       | AAAAA  | MAQUINA | MAQUINA2 | MACHINE | crr 45 # 54-23| medellin |colorado | 80201       |300564312|maqui  |
+        |chamirojaaoca@hotmail.com|Mr    |CHAMI        |CHAMII       | AAAAA  | MAQUINA | MAQUINA2 | MACHINE | crr 45 # 54-23| medellin |colorado | 80201       |300564312|maqui  |
