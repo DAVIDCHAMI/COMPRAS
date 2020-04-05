@@ -13,7 +13,4 @@ public class MyStore extends PageObject {
       Target.the("campo para registar correo").located(By.id("email_create"));
   public static final Target BTN_CREAR_CUENTA =
       Target.the("crear cuenta").located(By.id("SubmitCreate"));
-
-  private MyStore() {throw new IllegalStateException(UI_CLASS);
-  }
 }
